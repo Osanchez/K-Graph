@@ -10,7 +10,8 @@ FB15k
 | TransE(Paper, n=50)   | 210|	82  |	41.9|  61.3 |
 | TransE(Paper, n=100)  |    205 |  63 |  47.9 | 70.2 |
 
-Uniform Sampling
+
+
 
 | Model      |     MeanRank(Raw) |   MeanRank(Filter)   |	Hit@10(Raw)	| Hit@10(Filter)|
 | :-------- | --------:| :------: | :------: |:------: |
@@ -27,7 +28,8 @@ Uniform Sampling
 | TransE Right (Our, n=50)   | 191.8 | 119.8 | 50.0 |  64.3 |
 | TransE Average (Our, n=50)   | 256.9 | 163.8 |	46.0 |  60.7 |
 
-Bern Sampling
+
+
 
 | Model      |     MeanRank(Raw) |   MeanRank(Filter)   |	Hit@10(Raw)	| Hit@10(Filter)|
 | :-------- | --------:| :------: | :------: |:------: |
