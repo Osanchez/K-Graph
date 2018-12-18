@@ -24,7 +24,7 @@ map<int,int> e2num;
 map<pair<string,string>,map<string,double> > rel_left,rel_right;
 
 int relation_num,entity_num;
-int n= 100;
+int n= 50;
 
 double sigmod(double x)
 {
@@ -113,6 +113,8 @@ public:
         FILE* f3 = fopen(("entity2vec."+version).c_str(),"r");
         cout<<"Relation Number: "<<relation_num<<" "<<"Entity Number: "<<entity_num<<endl;
 		cout <<"File Read: " <<("relation2vec." + version).c_str() << endl;
+		cout <<"File Read: " <<("entity2vec." + version).c_str() << endl;
+
 
         int relation_num_fb=relation_num;
         relation_vec.resize(relation_num_fb);
@@ -156,9 +158,9 @@ public:
 		// this method take a very long time !!!
         for (int testid = 0; testid < fb_l.size(); testid+=1)
 		{
-			if (testid % 250 == 0) 
+			if (testid % 500 == 0) 
 			{			
-			cout << "Test ID: " << testid << endl;
+				cout << "Test ID: " << testid << endl;
 			}
 
 			int h = fb_h[testid];
@@ -247,13 +249,14 @@ public:
 		//right mean rank unfiltered - right hits at 10 unfiltered - right mean rank filtered - right hits at 10 filtered
 		cout<<"right:"<<rsum/fb_r.size()<<'\t'<<rp_n/fb_r.size()<<'\t'<<rsum_filter/fb_r.size()<<'\t'<<rp_n_filter/fb_r.size()<<endl;
 		cout << "" << endl;
-		for (int rel = 0; rel < relation_num; rel++)
-		{
-			int num = rel_num[rel];
-			cout << "rel:" << id2relation[rel] << ' ' << num << endl;
-			cout << "left:" << lsum_r[rel] / num << '\t' << lp_n_r[rel] / num << "\t" << lsum_filter_r[rel] / num << '\t' << lp_n_filter_r[rel] / num << endl;
-			cout << "right:" << rsum_r[rel] / num << '\t' << rp_n_r[rel] / num << '\t' << rsum_filter_r[rel] / num << '\t' << rp_n_filter_r[rel] / num << endl;
-		}
+		
+		//for (int rel = 0; rel < relation_num; rel++)
+		//{
+		//	int num = rel_num[rel];
+		//	cout << "rel:" << id2relation[rel] << ' ' << num << endl;
+		//	cout << "left:" << lsum_r[rel] / num << '\t' << lp_n_r[rel] / num << "\t" << lsum_filter_r[rel] / num << '\t' << lp_n_filter_r[rel] / num << endl;
+		//	cout << "right:" << rsum_r[rel] / num << '\t' << rp_n_r[rel] / num << '\t' << rsum_filter_r[rel] / num << '\t' << rp_n_filter_r[rel] / num << endl;
+		//}
     }
 
 };

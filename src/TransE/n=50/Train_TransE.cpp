@@ -133,8 +133,8 @@ private:
     void bfgs()
     {
         res=0;
-        int nbatches=100;
-        int nepoch = 1000;
+        int nbatches=960;
+        int nepoch = 500;
         int batchsize = fb_h.size()/nbatches;
             for (int epoch=0; epoch<nepoch; epoch++)
             {
@@ -325,7 +325,7 @@ int main(int argc,char**argv)
 {
     srand((unsigned) time(NULL));
     int method = 1;
-    int n = 100;
+    int n = 50;
     double rate = 0.001;
     double margin = 1;
     int i;

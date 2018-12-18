@@ -1,0 +1,52 @@
+Output Format
+
+//left mean rank unfiltered - left hits at 10 unfiltered - left mean rank filtered - left hits at 10 filtered
+cout<<"left:"<<lsum/fb_l.size()<<'\t'<<lp_n/fb_l.size()<<"\t"<<lsum_filter/fb_l.size()<<'\t'<<lp_n_filter/fb_l.size()<<endl;
+
+//right mean rank unfiltered - right hits at 10 unfiltered - right mean rank filtered - right hits at 10 filtered
+cout<<"right:"<<rsum/fb_r.size()<<'\t'<<rp_n/fb_r.size()<<'\t'<<rsum_filter/fb_r.size()<<'\t'<<rp_n_filter/fb_r.size()<<endl;
+-----------------------------------------------------
+
+TransE Uniform Samping n=50
+
+left:242.236    0.393797        85.7559  0.588411
+right:162.437   0.462833        63.9272  0.630902
+
+202.3365	0.428315	74.84155 0.6096565	
+
+
+Mean Rank (unfiltered)	Hits@10 (Unfiltered)	Mean Rank (Filtered)	Hits @10 (Filtered)
+202.3365		0.428315		74.84155		0.6096565
+
+
+
+TransE Bern Samping n=50
+
+left:321.973    0.421086        207.666  0.570415
+right:191.841   0.499738        119.836  0.643463
+
+256.907		0.460412	163.751  0.606939
+
+Mean Rank (unfiltered)	Hits@10 (Unfiltered)	Mean Rank (Filtered)	Hits @10 (Filtered)
+256.907			0.460412 		163.751			0.606939
+
+-----------------------------------------------------
+TransE Uniform Sampling n=100
+
+left:309.935    0.458567        192.351  0.641093
+right:173.929   0.539554        99.5757  0.710738
+
+241.932		0.4990605	145.96335 0.6759155
+
+Mean Rank (unfiltered)	Hits@10 (Unfiltered)	Mean Rank (Filtered)	Hits @10 (Filtered)
+241.932			0.4990605		145.96335		0.6759155
+
+TransE Bern Sampling n=100
+
+left:256.739    0.441232        81.0104  0.677778
+right:163.39    0.516209        53.7418  0.729173
+
+210.0645	0.4787205	67.3761	 0.7034755
+
+Mean Rank (unfiltered)	Hits@10 (Unfiltered)	Mean Rank (Filtered)	Hits @10 (Filtered)
+210.0645		0.4787205		67.3761			0.7034755
