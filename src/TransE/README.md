@@ -16,3 +16,8 @@ Datasets are required in the folder data/ in the following format, containing si
 # How to run
 Take each modified .cpp based on the size you want to train on. n=50, n=100. run makefile to compile
 to train each model run the command train_transE -method (1 or 0; bern unif)
+
+#Notes
+While a majority of the code is left close to the original. some hard coded values were changed and debugging statements were added
+to make training and testing easier and get some feedback as to whether or not its doing what its supposed to. That is why this code was included in the submission. I do not take credit 
+for any of the code written
